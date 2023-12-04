@@ -16,7 +16,7 @@
     "glob": "^10.3.10"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.38.0",
+    "aws-cdk-lib": "^2.80.0",
     "cdk-docker-image-deployment": "^0.0.449",
     "k6": "^0.0.0"
   }
