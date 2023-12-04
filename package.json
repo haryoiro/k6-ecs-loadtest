@@ -1,0 +1,23 @@
+{
+  "name": "k6-ecs-loadtest",
+  "version": "1.0.0",
+  "scripts": {
+    "build:xk6": "docker run --rm -e GOOS=linux -u \"$(id -u):$(id -g)\" -v \"${PWD}/load-testing:/xk6\" grafana/xk6 build v0.45.1 --with github.com/grafana/xk6-output-influxdb@v0.4.1",
+    "build:scenario": "node -r esbuild-register ./build.ts",
+    "cdk:synth": "cdk synth"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.2",
+    "@types/k6": "^0.0.0",
+    "esbuild": "^0.19.8",
+    "esbuild-register": "^3.5.0",
+    "glob": "^10.3.10"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.38.0",
+    "cdk-docker-image-deployment": "^0.0.449",
+    "k6": "^0.0.0"
+  }
+}
